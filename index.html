@@ -6,45 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Todo App</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <!-- NavBar -->
-    <div class="toolbox-cont">
-        <div class="toolbox-color-cont">
-            <div class="lightpink color"></div>
-            <div class="lightgreen color"></div>
-            <div class="lightblue color"></div>
-            <div class="black color"></div>
-        </div>
-        <div class="action-btn-cont">
-            <div class="add-btn">
-                <i class="fa-solid fa-plus"></i>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>Todo App</h1>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
             </div>
-            <div class="remove-btn">
-            <i class="fa-solid fa-xmark"></i>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="category-container">
+            <h2>Categories</h2>
+            <ul id="categoryList">
+                <!-- Categories will be dynamically added here using JavaScript -->
+            </ul>
+        </div>
+
+        <div class="task-container">
+            <h2>Todo List</h2>
+            <div class="input-container">
+                <input type="text" id="taskInput" placeholder="Enter your task">
+                <button onclick="addTask()">Add</button>
             </div>
+            <ul id="taskList"></ul>
         </div>
     </div>
 
-    <!-- Todo Box Space-->
-    <div class="main-cont">
-
-    </div>
-
-    <!-- Modal Container -->
-    <div>
-        <textarea placeholder="Enter Your Task"></textarea>
-        <div class="priority-color-cont">
-            <div class="lightpink"></div>
-            <div class="lightgreen"></div>
-            <div class="lightblue"></div>
-            <div class="black"></div>
-        </div>
-    </div>
-
-
+    <script src="script.js"></script>
 </body>
 </html>
